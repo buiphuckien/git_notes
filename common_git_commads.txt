@@ -1,1 +1,46 @@
 
+1 - Create a new repositoty
+   + On local computer
+      * make a new repo
+      * git init # Initialize git
+      * git remote add origin <url>
+      * Want to change remote url: git remote set-url <new url>
+      * git add .
+      * git commit -am "Message"
+      * git push origin master
+      
+ 2 - Using ssh with git
+    + On local computer
+      * check whether exist ssh key: ls -al ~/.ssh (id_rsa.pub, id_ecdsa.pub, id_ed25519.pub)
+      * If not exist -> generate a new one: ssh-keygen -t ed25519 -C "your_email@example.com"
+      * Start the ssh-agent in the background: eval "$(ssh-agent -s)"
+      * Add your SSH private key to the ssh-agent: ssh-add --apple-use-keychain ~/.ssh/id_ed25519 (can remove --apple-use-keychain)
+      * Copy the SSH public key to your clipboard: pbcopy < ~/.ssh/id_ed25519.pub
+      * Paste to github setting
+      
+3 - Working with the same repository on 2 computers
+    + Repository EXIST
+      * git pull --> to update the latest
+      * working blablabla ...
+      * git add .
+      * git commit ...
+      * git push ...
+    + Repository NOT EXIST
+      * git clone <url> # clone it to the local computer first
+      * working on it ...
+      * git add .
+      * git commit ...
+      * git push ...
+      
+4 - Switch branch
+    + List all branches: git branch -a
+    + git checkout <branch1> # Switch to branch1
+    + git switch <branch2> # Switch to branch2
+
+5 - git remote
+    + Check existing remote: git remote -v
+    + Rename remote: git remote rename oldname newname
+    + Remove remote: git remote rm <name>
+    + Change remote url: git remote set-url <new url>
+      
+
