@@ -43,4 +43,8 @@
     + Remove remote: git remote rm <name>
     + Change remote url: git remote set-url <new url>
       
+      
+6 - Before work on project
+   + git getch --all
+   + git merge --all
 
